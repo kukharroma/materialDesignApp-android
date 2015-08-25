@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/cats_category">
+
+        <menu>
+            <item android:title="@string/sphinx"/>
+            <item android:title="@string/burma"/>
+            <item android:title="@string/home"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/dogs_category">
+
+        <menu>
+            <item android:title="@string/boxer"/>
+            <item android:title="@string/shepherd"/>
+            <item android:title="@string/labrador"/>
+        </menu>
+    </item>
+</menu>
