@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.materialdesignapp.MainActivity">
+    tools:context="com.materialdesignapp.view.activities.MainActivity">
 
     <LinearLayout
-        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -20,6 +19,12 @@
             android:background="@color/colorPrimary"
             android:minHeight="?attr/actionBarSize" />
 
+        <FrameLayout
+
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
@@ -28,6 +33,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/layout_drawer_header"
+        app:itemIconTint="@color/colorIconTint"
+        app:itemTextColor="@color/colorItemText"
         app:menu="@menu/menu_drawer" />
 
 

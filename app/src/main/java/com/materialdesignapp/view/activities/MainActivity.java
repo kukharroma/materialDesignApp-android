@@ -1,0 +1,105 @@
+package com.materialdesignapp.view.activities;
+
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import com.materialdesignapp.R;
+import com.materialdesignapp.view.fragments.BoxerFragment;
+import com.materialdesignapp.view.fragments.BurmaFrament;
+import com.materialdesignapp.view.fragments.ShepherdFragment;
+import com.materialdesignapp.view.fragments.SphinxFragment;
+
+/**
+ * Created by roma on 25.08.15.
+ */
+public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private ActionBarDrawerToggle drawerToggle;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        initComponents();
+    }
+
+    private void initComponents() {
+        toolbar = (Toolbar) findViewById(R.id.app_toolbar);
+        setSupportActionBar(toolbar);
+        navigationView = (NavigationView) findViewById(R.id.nv_menu);
+        navigationView.setNavigationItemSelectedListener(this);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+        drawerLayout.setDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.settings)
+            return true;
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        drawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        navigate(menuItem.getItemId());
+        return true;
+    }
+
+    public void navigate(int navigateItem) {
+        switch (navigateItem) {
+            case R.id.sphinx_item:
+                showFragment(new SphinxFragment());
+                break;
+            case R.id.burma_item:
+                showFragment(new BurmaFrament());
+                break;
+            case R.id.boxer_item:
+                showFragment(new BoxerFragment());
+                break;
+            case R.id.shepherd_item:
+                showFragment(new ShepherdFragment());
+                break;
+        }
+    }
+
+    public void showFragment(Fragment fragment) {
+        drawerLayout.closeDrawer(GravityCompat.START);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START))
+            drawerLayout.closeDrawer(GravityCompat.START);
+        else
+            super.onBackPressed();
+    }
+}

@@ -4,18 +4,25 @@
     <item android:title="@string/cats_category">
 
         <menu>
-            <item android:title="@string/sphinx"/>
-            <item android:title="@string/burma"/>
-            <item android:title="@string/home"/>
+            <item
+                android:id="@+id/sphinx_item"
+                android:title="@string/sphinx" />
+            <item
+                android:id="@+id/burma_item"
+                android:title="@string/burma" />
         </menu>
     </item>
 
     <item android:title="@string/dogs_category">
 
         <menu>
-            <item android:title="@string/boxer"/>
-            <item android:title="@string/shepherd"/>
-            <item android:title="@string/labrador"/>
+            <item
+                android:id="@+id/boxer_item"
+                android:title="@string/boxer" />
+
+            <item
+                android:id="@+id/shepherd_item"
+                android:title="@string/shepherd" />
         </menu>
     </item>
 </menu>

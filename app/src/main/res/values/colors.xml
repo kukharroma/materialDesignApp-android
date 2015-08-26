@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorPrimaryDark">#00453d</color>
     <color name="colorPrimary">#00796B</color>
-    <color name="colorAccent">#2e4679</color>
-    <color name="colorTextColorPrimary">#ff0828</color>
-    <color name="colorTextColorSecondary">#be84ff</color>
-    
+    <color name="colorAccent">#00796B</color>
+    <color name="colorTextColorPrimary">#fff</color>
+
+    <color name="colorTextColorSecondary">#fff</color>
+    <color name="colorIconTint">#2a48ff</color>
+    <color name="colorItemText">#2a48ff</color>
+    <color name="colorNavigationColor">@android:color/transparent</color>
+
 </resources>
