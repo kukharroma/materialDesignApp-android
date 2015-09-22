@@ -1,20 +1,15 @@
 <resources>
     <string name="app_name">MaterialDesignApp</string>
-    
-    <string name="first_item">First item</string>
-    <string name="second_item">Second item</string>
 
-    <string name="cats_category">Cats</string>
-    <string name="sphinx">Sphinx</string>
-    <string name="burma">Burma</string>
-    <string name="home">Home</string>
-
-    
-    <string name="dogs_category">Dogs</string>
-    <string name="boxer">Boxer</string>
-    <string name="shepherd">Shepherd</string>
-    <string name="labrador">Labrador</string>
+    <string name="collapsingToolbarLayout">CollapsingToolbarLayout</string>
+    <string name="collapsingToolbarWithNavigationDrawer">CollapsingToolbarWithNavigationDrawer</string>
+    <string name="collapsingToolbarWithFloatingButton">CollapsingToolbarWithFloatingButton</string>
+    <string name="parallaxScrollingTabs">ParallaxScrollingTabs</string>
 
     <string name="drawer_open"></string>
     <string name="drawer_close"></string>
+
+    <string name="settings">Settings</string>
+
+    <string name="default_text_card_view">Simple Card View</string>
 </resources>

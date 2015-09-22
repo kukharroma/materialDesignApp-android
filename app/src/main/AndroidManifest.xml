@@ -14,6 +14,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activities.MainActivity" />
+        </activity>
+        <activity android:name=".view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activities.MainActivity" />
+        </activity>
+        <activity android:name=".view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity3">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activities.MainActivity" />
+        </activity>
+        <activity android:name=".view.activities.collapsingToolbarFB.CollapsingToolbarLayoutFBActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activities.MainActivity" />
+        </activity>
     </application>
 
 

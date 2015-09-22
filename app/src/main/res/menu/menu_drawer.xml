@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/cats_category">
-
+    <item
+        android:id="@+id/collapsing_toolbar_layout_item"
+        android:title="@string/collapsingToolbarLayout">
         <menu>
             <item
-                android:id="@+id/sphinx_item"
-                android:title="@string/sphinx" />
+                android:id="@+id/collapsing_toolbar_layout_item1"
+                android:title="1" />
             <item
-                android:id="@+id/burma_item"
-                android:title="@string/burma" />
+                android:id="@+id/collapsing_toolbar_layout_item2"
+                android:title="2" />
+            <item
+                android:id="@+id/collapsing_toolbar_layout_item3"
+                android:title="3" />
         </menu>
     </item>
 
-    <item android:title="@string/dogs_category">
+    <item
+        android:id="@+id/collapsing_toolbar_with_navigation_item"
+        android:title="@string/collapsingToolbarWithNavigationDrawer" />
+    <item
+        android:id="@+id/collapsing_toolbar_with_FB_item"
+        android:title="@string/collapsingToolbarWithFloatingButton" />
+    <item
+        android:id="@+id/parallax_scrolling_tabs_item"
+        android:title="@string/parallaxScrollingTabs" />
 
-        <menu>
-            <item
-                android:id="@+id/boxer_item"
-                android:title="@string/boxer" />
-
-            <item
-                android:id="@+id/shepherd_item"
-                android:title="@string/shepherd" />
-        </menu>
-    </item>
 </menu>

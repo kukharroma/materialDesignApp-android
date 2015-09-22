@@ -1,5 +1,6 @@
 package com.materialdesignapp.view.activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -12,10 +13,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.materialdesignapp.R;
-import com.materialdesignapp.view.fragments.BoxerFragment;
-import com.materialdesignapp.view.fragments.BurmaFrament;
-import com.materialdesignapp.view.fragments.ShepherdFragment;
-import com.materialdesignapp.view.fragments.SphinxFragment;
+import com.materialdesignapp.view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity1;
+import com.materialdesignapp.view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity2;
+import com.materialdesignapp.view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity3;
+import com.materialdesignapp.view.activities.collapsingToolbarFB.CollapsingToolbarLayoutFBActivity;
 
 /**
  * Created by roma on 25.08.15.
@@ -34,7 +35,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         initComponents();
     }
 
-    private void initComponents() {
+    public void initComponents() {
         toolbar = (Toolbar) findViewById(R.id.app_toolbar);
         setSupportActionBar(toolbar);
         navigationView = (NavigationView) findViewById(R.id.nv_menu);
@@ -73,20 +74,25 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         return true;
     }
 
-    public void navigate(int navigateItem) {
-        switch (navigateItem) {
-            case R.id.sphinx_item:
-                showFragment(new SphinxFragment());
+    public void navigate(int navigateItemId) {
+        switch (navigateItemId) {
+            case R.id.collapsing_toolbar_layout_item1: {
+                startActivity(new Intent(this, CollapsingToolbarLayoutActivity1.class));
                 break;
-            case R.id.burma_item:
-                showFragment(new BurmaFrament());
+            }
+            case R.id.collapsing_toolbar_layout_item2: {
+                startActivity(new Intent(this, CollapsingToolbarLayoutActivity2.class));
                 break;
-            case R.id.boxer_item:
-                showFragment(new BoxerFragment());
+            }
+            case R.id.collapsing_toolbar_layout_item3: {
+                startActivity(new Intent(this, CollapsingToolbarLayoutActivity3.class));
                 break;
-            case R.id.shepherd_item:
-                showFragment(new ShepherdFragment());
+            }
+            case R.id.collapsing_toolbar_with_FB_item: {
+                startActivity(new Intent(this, CollapsingToolbarLayoutFBActivity.class));
                 break;
+            }
+
         }
     }
 
