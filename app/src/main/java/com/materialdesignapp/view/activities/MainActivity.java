@@ -12,11 +12,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.crashlytics.android.Crashlytics;
 import com.materialdesignapp.R;
 import com.materialdesignapp.view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity1;
 import com.materialdesignapp.view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity2;
 import com.materialdesignapp.view.activities.collapsingToolbar.CollapsingToolbarLayoutActivity3;
 import com.materialdesignapp.view.activities.collapsingToolbarFB.CollapsingToolbarLayoutFBActivity;
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by roma on 25.08.15.
@@ -31,6 +33,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         initComponents();
     }
