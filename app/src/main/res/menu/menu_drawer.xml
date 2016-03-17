@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
-        android:id="@+id/collapsing_toolbar_layout_item"
-        android:title="@string/collapsingToolbarLayout">
-        <menu>
-            <item
-                android:id="@+id/collapsing_toolbar_layout_item1"
-                android:title="1" />
-            <item
-                android:id="@+id/collapsing_toolbar_layout_item2"
-                android:title="2" />
-            <item
-                android:id="@+id/collapsing_toolbar_layout_item3"
-                android:title="3" />
-        </menu>
-    </item>
+        android:id="@+id/collapsing_toolbar_layout_item1"
+        android:title="Hide toolbar and app bar" />
+    <item
+        android:id="@+id/collapsing_toolbar_layout_item2"
+        android:title="Hide app bar" />
+    <item
+        android:id="@+id/collapsing_toolbar_layout_item3"
+        android:title="Hide back icon" />
 
     <item
         android:id="@+id/collapsing_toolbar_with_navigation_item"
