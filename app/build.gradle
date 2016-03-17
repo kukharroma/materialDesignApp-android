@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.0"
 
     defaultConfig {
-        applicationId "com.materialdesignapp"
+        applicationId "cooksdev.com.materialApp"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
