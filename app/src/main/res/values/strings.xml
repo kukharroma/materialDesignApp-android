@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MaterialDesignApp</string>
+    <string name="app_name">MaterialApp</string>
 
     <string name="collapsingToolbarLayout">CollapsingToolbarLayout</string>
     <string name="collapsingToolbarWithNavigationDrawer">CollapsingToolbarWithNavigationDrawer</string>
